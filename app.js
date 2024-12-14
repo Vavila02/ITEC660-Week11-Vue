@@ -38,8 +38,19 @@ const app = Vue.createApp({
           }
   
         ]
-      }
+      };
+    };
+    methods:{
+        toggleDetails(){
+            this.showDetails =!this.ShowDetails;
+        },
+        increaseAge(index){
+            this.contacts[index].age+=5;
+        },
+        decreaseAge(index){
+            this.contacts[index].age-=3;
+        }
     }
-  })
+  });
   
-  app.mount('#app')
+  app.mount('#app');
